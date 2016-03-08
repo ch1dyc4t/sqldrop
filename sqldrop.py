@@ -21,6 +21,9 @@ def main():
     parser = optparse.OptionParser('usage: %prog ' + 'fuck SQL injection')
     parser.add_option('-u', dest = 'URL', type = 'string', help = 'Target URL (e.g. "http://www.example.com/vul.php?id=1")')
     parser.add_option('-d', dest = 'databases', type = 'string', help = '')
+    parser.add_option('-t', dest = 'tables', type = 'string', help = '')
+    parser.add_option('-c', dest = 'columns', type = 'string', help = '')
+    parser.add_option('--dump', dest= 'true', type = 'string', help = '')
     (options, argvs) = parser.parse_args()
 
     if options:
